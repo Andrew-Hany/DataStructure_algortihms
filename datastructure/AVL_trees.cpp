@@ -51,6 +51,7 @@ return root;
 else if(data <=root->getdata()){
     root->setLeft(insert(root->getleft(),data));
 }
+
 else if(data >root->getdata()){
     root->setRight(insert(root->getright(),data));
     
