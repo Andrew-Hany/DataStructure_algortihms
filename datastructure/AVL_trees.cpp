@@ -63,14 +63,16 @@ else if(data >root->getdata()){
   
  int balance=getBalanceFactor(root);
 
+
 //  if the BST is not balanced
 //  there are 4 cases 
 
 // 1)Left left case
   if (balance > 1 && data < root->getleft()->getdata())  
+  
         return RotateRight(root); 
         //2) Right Right Case  
-    if (balance < -1 && data < root->getright()->getdata())  
+    if (balance < -1 && data >root->getright()->getdata())  
         return RotateLeft(root);  
   
     // //3) Left Right Case  
@@ -83,7 +85,7 @@ else if(data >root->getdata()){
     // // 4)Right Left Case  
     if (balance < -1 && data < root->getright()->getdata())  
     {  
-        root->setRight (RotateRight(root->getright()));  
+        root->setRight(RotateRight(root->getright()));  
         return RotateLeft(root);  
     }  
   
@@ -168,7 +170,7 @@ int main(){
      cur= bst->insert(cur, 30);
       cur= bst->insert(cur, 40);
  cur= bst->insert(cur, 50);
- cur= bst->insert(cur, 25);
+ cur= bst->insert(cur, 60);
       //printing the inorder
   cout<<"inorder: ";
   bst->inorder(cur);
