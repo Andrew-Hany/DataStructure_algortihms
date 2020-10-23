@@ -1,0 +1,5 @@
+#documentation
+
+as in the functions i used only one forloop (O(n) and used pre-sorting using heap sort (ologn) 
+then it is O(n)+O(nlogn) 
+i did so in both  tasks where both tasks i used only one for loop
