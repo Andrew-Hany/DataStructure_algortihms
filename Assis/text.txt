@@ -1,0 +1,20 @@
+My algorithm is 
+
+1)first I did DFS
+2)transpose to the graph 
+3)third I did DFs to see which groups are connected
+
+NOTe: I used the second example In the slide but by numbers 
+
+A->0
+B->1
+C->2
+
+And so on
+
+So the answer should be
+
+Group: { 11  }                                                                                                                          
+Group: { 3 4 5 6  }                                                                                                                     
+Group: { 7 8 9 10  }                                                                                                                    
+Group: { 0 1 2  }  

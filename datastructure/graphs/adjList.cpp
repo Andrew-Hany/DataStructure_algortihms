@@ -14,57 +14,57 @@ class Graph{
 	public:
 		vector<vector<int> > adjList;
 		vector<Edge> edges;
-Graph(int N){
-adjList.resize(N);
+        Graph(int N){
+        adjList.resize(N);
 
-}
-	void addEdge(int src,int dest ){
-		Edge edge;
-		edge.src=src;
-		edge.dest=dest;
-		
-		edges.push_back(edge);
-		// cout<<edges[0].dest;
-		adjList[src].push_back(dest);
-	}
-
-
+        }
+        void addEdge(int src,int dest ){
+            Edge edge;
+            edge.src=src;
+            edge.dest=dest;
+            
+            edges.push_back(edge);
+            // cout<<edges[0].dest;
+            adjList[src].push_back(dest);
+        }
 
 
-	void printGraph()
-{
-	for (int i=0; i<adjList.size(); i++)
-	{
-		cout <<i<<"-->";
-		for (int v: adjList[i])
-			cout<<v<<" ";
-		cout <<endl;
-	}
 
-}
-bool isCycle(){
-DisjointSet ds;
-vector<int> universe ;
-for(int i=0;i<edges.size();i++)
-		universe.push_back(edges[i].src);
-		universe.push_back(edges[edges.size()-1].dest);
-ds.makeSet(universe);
-// cout<<edges.size();
-		for(int i=0;i<edges.size();i++)
-		{
-			cout<<edges[i].dest<<endl;
-		int x= ds.Find(edges[i].src);
-		int y =ds.Find(edges[i].dest);
-		cout<<x<<y<<endl;
-		if(x==y)
-		return 1;
-		ds.Union(edges[i].src,edges[i].dest);
-		}
-// printSets(universe, ds);
-// cout<<endl;
-return 0;
 
-}
+        void printGraph()
+            {
+                for (int i=0; i<adjList.size(); i++)
+                {
+                    cout <<i<<"-->";
+                    for (int v: adjList[i])
+                        cout<<v<<" ";
+                    cout <<endl;
+                }
+
+            }
+        bool isCycle(){
+        DisjointSet ds;
+        vector<int> universe ;
+        for(int i=0;i<edges.size();i++)
+                universe.push_back(edges[i].src);
+                universe.push_back(edges[edges.size()-1].dest);
+        ds.makeSet(universe);
+        // cout<<edges.size();
+                for(int i=0;i<edges.size();i++)
+                {
+                    cout<<edges[i].dest<<endl;
+                int x= ds.Find(edges[i].src);
+                int y =ds.Find(edges[i].dest);
+                cout<<x<<y<<endl;
+                if(x==y)
+                return 1;
+                ds.Union(edges[i].src,edges[i].dest);
+                }
+        // printSets(universe, ds);
+        // cout<<endl;
+        return 0;
+
+        }
     
 };
 

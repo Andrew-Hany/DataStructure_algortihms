@@ -1,0 +1,4 @@
+www.test1.com,12,52.1739
+www.test2.com,7,17.5
+www.test3.com,18,15.6522
+www.test5.com,0,0
